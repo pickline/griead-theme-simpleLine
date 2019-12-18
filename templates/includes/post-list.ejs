@@ -10,7 +10,7 @@
         </time>
         <% post.tags.forEach(function(tag) { %>
           <a href="<%= tag.link %>" class="post-tag">
-            # <%= tag.name %>
+            <%= tag.name %>
           </a>
         <% }); %>
       </div>

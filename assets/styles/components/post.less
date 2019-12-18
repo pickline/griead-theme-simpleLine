@@ -1,4 +1,8 @@
 .post-detail {
+  ::selection{
+    background-color: black;
+    color: white;
+  }
   flex: 1;
   .post {
     padding: 24px 32px;
@@ -23,7 +27,10 @@
       padding-bottom: 24px;
   
       .post-time {
-        color: @dark-gray;
+        color: @oc-gray-6;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
   
       .post-tag {

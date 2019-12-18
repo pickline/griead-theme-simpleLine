@@ -1,4 +1,8 @@
 .post-container {
+  ::selection{
+    background-color: black;
+    color: white;
+  }
   flex: 1;
   .post {
     padding-bottom: 32px;
@@ -15,7 +19,10 @@
       font-size: 12px;
       padding-bottom: 24px;
       .post-time {
-        color: @dark-gray;
+        color: @oc-gray-6;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
       .post-tag {
         padding: 8px 8px;

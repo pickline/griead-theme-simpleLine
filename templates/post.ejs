@@ -18,7 +18,7 @@
               </time>
               <% post.tags.forEach(function(tag) { %>
                 <a href="<%= tag.link %>" class="post-tags">
-                  # <%= tag.name %>
+                  <%= tag.name %>
                 </a>
               <% }); %>
             </div>
