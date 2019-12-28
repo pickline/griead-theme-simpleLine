@@ -2,6 +2,29 @@
 
 <div class="archives-container">
   <div class="entries">
+  <% years.forEach(function(year) { %>
+    <div class="entry">
+      <%if (year % 3 == 0) { %>
+      <div class="title big"><%- year %></div>
+      <%} else { %>
+      <div class="title"><%- year %></div>
+      <%} %>
+      <div class="body">
+        <% posts.forEach(function(post) { %>
+          <%if (post.date.indexOf(year) !== -1) { %>
+              <a href="<%= post.link %>">
+                <h2 class="post-title">
+                  <%= post.title %>
+                  <!-- <small><%= post.dateFormat %></small> -->
+                </h2>
+              </a>
+          <% } %>
+        <% }); %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+  <!-- <div class="entries">
     <div class="entry">
       <div class="title">2011</div>
       <div class="body">
@@ -47,19 +70,5 @@
     </div>
   </div>
     
-  <!-- <% years.forEach(function(year) { %>
-    <h2 class="year"><%- year %></h2>
-    <% posts.forEach(function(post) { %>
-      <%if (post.date.indexOf(year) !== -1) { %>
-        <article class="post">
-          <a href="<%= post.link %>">
-            <h2 class="post-title">
-              <%= post.title %>
-              <small><%= post.dateFormat %></small>
-            </h2>
-          </a>
-        </article>
-      <% } %>
-    <% }); %>
-  <% }); %> -->
+   -->
 </div>
