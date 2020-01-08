@@ -243,3 +243,7 @@ $RECYCLE.BIN/
 /styles/**/*
 /media/**/*
 package-lock.json
+yarn.lock
+style-override.js
+gulpfile.js
+app.js
