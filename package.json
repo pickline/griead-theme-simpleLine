@@ -8,7 +8,7 @@
     "serve": "nodemon --watch templates --watch assets -e js,ejs,less,css app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "pickline",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",

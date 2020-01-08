@@ -1,0 +1,14 @@
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+
+<div id="valine-container"></div>
+
+<script>
+    var valine = new Valine();
+    valine.init({
+        el:"#valine-container",
+        appId: '<%= site.customConfig.valineID %>',
+        appKey:'<%= site.customConfig.valineKey %>',
+        pageSize: new Number('<%- site.customConfig.valinePageSize %>'),
+        placeholder: '<%= site.customConfig.valinePlaceholer %>'
+    })
+</script>

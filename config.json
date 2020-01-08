@@ -1,6 +1,11 @@
 {
   "name": "SimpleLine",
-  "version": "0.1.0",
-  "author": "EryouHao",
-  "customConfig": []
+  "version": "0.2.0",
+  "author": "pickline",
+  "customConfig": [
+    {"name": "valineID","label": "appId","group": "Valine 评论配置","value": "","type": "input","note": "请输入appId"},
+    {"name": "valineKey","label": "appKey","group": "Valine 评论配置","value": "","type": "input","note": "请输入appKey"},
+    {"name": "valinePageSize","label": "pageSize","group": "Valine 评论配置","value": 10,"type": "input","note": "请输入每页评论数"},
+    {"name": "valinePlaceholder","label": "placeholder","group": "Valine 评论配置","value": "","type": "input","note": "请输入placeholder"}
+  ]
 }

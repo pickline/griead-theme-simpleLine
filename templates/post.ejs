@@ -1,6 +1,9 @@
 <html>
   <head>
     <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <% if (site.customConfig.valineID && site.customConfig.valineKey) { %>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+    <% } %>
   </head>
   <body>
     <div class="main">
@@ -51,8 +54,10 @@
           <% if (commentSetting.commentPlatform === 'disqus') { %>
             <%- include('./includes/disqus') %>
           <% } %>
+        <% } else if(site.customConfig.valineID && site.customConfig.valineKey) { %>
+          <%- include('./includes/valine') %>
         <% } %>
-    
+
         <%- include('./includes/footer') %>
       </div>
     </div>
