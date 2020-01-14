@@ -24,18 +24,8 @@
         color: #1abc9c;
         text-decoration:none;
         display:inline-block;
-        &::before{
-            content:'';
-            position:absolute;
-            width:0;
-            right:0;
-            bottom:0;
-            height:1px;
-            background:#1abc9c;
-            transition: width .3s ease;
-        }
         &:hover {
-            color: #D7191A;
+            color: #D7191A !important;
             &::before{
                 width:100%;
                 left:0;
@@ -73,7 +63,7 @@
         border: none;
         resize: none;
         outline: none;
-        padding: 10px 5px;
+        margin: 10px 5px;
         max-width: 100%;
         font-size: .775em;
     }
@@ -83,8 +73,7 @@
         margin-top:-2px;
     }
     .vwrap {
-        border: 1px solid #f0f0f0;
-        border-radius: 4px;
+        border-bottom: 1px solid #f0f0f0;
         margin-bottom: 10px;
         overflow: hidden;
         position: relative;
@@ -109,6 +98,10 @@
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
+            transition:all .25s ease;
+            &:hover {
+                color:#D7191A;
+            }
         }
         .vedit .vemojis {
             display: none;
@@ -138,7 +131,7 @@
         }
         .vheader {
             .vinput {
-                width: 33.33%;
+                width: 32%;
                 border-bottom: 1px #dedede dashed;
             }
             &.item2 .vinput {
@@ -148,7 +141,7 @@
                 width: 100%;
             }
             .vinput:focus {
-                border-bottom-color: #eb5055;
+                border-bottom-color: black;
             }
             @media screen and (max-width:520px) {
                 .vinput {
@@ -289,11 +282,10 @@
     .vbtn {
         transition-duration: .4s;
         text-align: center;
-        color: #313131;
-        border: 1px solid #ededed;
-        border-radius: .3em;
+        border:none;
+        background-color: white;
+        color:black;
         display: inline-block;
-        background: #ededed;
         margin-bottom: 0;
         font-weight: 400;
         vertical-align: middle;
@@ -311,9 +303,8 @@
     }
     .vbtn:active,
     .vbtn:hover {
-        color: #3090e4;
-        border-color: #3090e4;
-        background-color: #fff;
+        color: white;
+        background-color: black;
     }
     .vempty {
         padding: 1.25em;
@@ -335,7 +326,6 @@
                 width: 3.125em;
                 height: 3.125em;
                 float: left;
-                border-radius: 50%;
                 margin-right: .7525em;
                 border:1px solid #f5f5f5;
                 padding:.125em;
@@ -356,18 +346,11 @@
                     font-weight: 500;
                     margin-right: .875em;
                     cursor: pointer;
-                    color: #1abc9c;
                     text-decoration:none;
                     display:inline-block;
-                    &::before{
-                        content:'';
-                        position:absolute;
-                        width:0;
-                        right:0;
-                        bottom:0;
-                        height:1px;
-                        background:#1abc9c;
-                        transition: width .3s ease;
+                    &::selection {
+                        color:white;
+                        background-color: black;
                     }
                     &:hover {
                         color: #D7191A;
@@ -410,9 +393,13 @@
                     position: relative;
                     .vat {
                         font-size: .8125em;
-                        color: #ef2f11;
                         cursor: pointer;
-                        float:right;
+                        float: right;
+                        user-select: none;
+                        transition:all .25s ease;
+                        &:hover {
+                            color: #D7191A;
+                        }
                     }
                 }
             }
@@ -431,6 +418,10 @@
                 position: relative;
                 margin-bottom: .75em;
                 padding-top: .625em;
+                & p::selection {
+                    color:white;
+                    background-color: #4a4a4a;
+                }
                 img,iframe,frame {
                     max-width: 100%;
                     border:none;
