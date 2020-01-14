@@ -95,10 +95,14 @@
         .vedit {
             position: relative;
             padding-top:10px;
+            textarea {
+                resize: none;
+            }
         }
         .vedit .vctrl {
             text-align: right;
             font-size: 12px;
+            user-select: none;
         }
         .vedit .vctrl span {
             padding: 10px;
@@ -243,6 +247,7 @@
             vertical-align: middle;
         }
         .vcount {
+            user-select: none;
             .vnum {
                 font-weight: 600;
                 font-size: 1.25em;
@@ -398,6 +403,7 @@
                     color: #b3b3b3;
                     font-size: .75em;
                     margin-right: .875em;
+                    user-select: none;
                 }
                 .vmeta {
                     line-height:1;
