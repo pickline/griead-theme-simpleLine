@@ -3,6 +3,7 @@
 
 # Feature
 - [x] archives页面使用时间线
+- [x] 增加对评论系统valine的支持
 
 # Feature(To be continue)
-- [ ] 增加对评论系统valine的支持
+- [ ] 增加mp3播放器
